@@ -1,6 +1,7 @@
 .columns > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  margin: 1rem;
 }
 
 .columns img {
@@ -19,15 +20,38 @@
   display: block;
 }
 
+.columns > div > div:last-of-type {
+  background-color: lightgrey;
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+.columns > div > div:last-of-type h2 {
+  font-size: 2rem;
+}
+
+.columns .button-container a.button {
+  border-radius: 0%;
+  background-color: var(--capstone-background-color);
+  color: black;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
   }
 
   .columns > div > div {
+    flex: 2;
+  }
+
+  .columns > div > .columns-img-col img {
+    display: block;
+    height: 462px;  
+  }
+
+  .columns > div > div:last-of-type {
     flex: 1;
-    order: unset;
   }
 }

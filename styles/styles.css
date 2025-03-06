@@ -38,6 +38,9 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* eds capstone color */
+  --capstone-background-color: #ffea00;
 }
 
 /* fallback fonts */
@@ -53,7 +56,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -112,12 +115,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +162,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -228,24 +248,137 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
-  padding: 0 24px;
+  /* padding: 0 24px; */
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
+}
+
+main .magazine {
+  padding: 10px;
+  margin: 0;
+  line-height: 2;
+  font-size: 01rem;
+}
+
+main .magazine h2,
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 0;
+  font-weight: 300;
+}
+
+main .magazine h3 {
+  display: inline-block;
+  padding: 20px;
+}
+
+main .magazine h3::after {
+  border-bottom: 2px solid var(--capstone-background-color);
+  content: "";
+  display: block;
+  position: relative;
+  top: .25em;
+  width: 5pc;
+}
+
+main .section.magazine:not(:has(~ .section.magazine)) p:last-of-type {
+  padding-bottom: 20%;
+  border-bottom: 1px solid lightgrey;
+}
+
+main .section.word-dictionary {
+  background-color: lightgray;
+  margin: 0px;
+}
+
+main .section.word-dictionary .default-content-wrapper {
+  padding: 10%;
+}
+
+main .section.word-dictionary h4,
+.section.word-dictionary p:first-of-type {
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+main .section.word-dictionary .default-content-wrapper p:first-of-type::after {
+  margin-bottom: 2%;
+  border-bottom: 2px solid var(--capstone-background-color);
+  content: "";
+  display: block;
+  position: relative;
+  top: .25em;
+  width: 5pc;
+}
+
+#about-us {
+  margin-left: 3%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-size: 2.8rem;
 }
 
 @media (width >= 900px) {
   main > .section > div {
     padding: 0 32px;
   }
+
+  main:has(.section.magazine) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  main > .section.magazine:first-of-type {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  main .section.breadcrumbs-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  main .section.word-dictionary {
+    margin: 2% 5%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  main .section.magazine:not(:first-of-type) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: justify;
+  }
+
+  main .section.word-dictionary .default-content-wrapper {
+    padding: 3.7%;
+  }
+
+  main .section.magazine:not(:has(~ .section.magazine)) p:last-of-type {
+    padding-bottom: 10%;
+  }
+
+  main .section.magazine-author-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  main .articles-list-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+  }
+  
 }
 
 /* section metadata */

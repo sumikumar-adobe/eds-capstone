@@ -1,0 +1,62 @@
+main .section.download-pdf-container {
+    margin: 0 2%;
+}
+
+.download-pdf-container .default-content-wrapper p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10%;
+    font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.download-pdf-container .download-pdf {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.download-pdf-container .download-pdf div[data-align='justify'] > p:not(:first-child) {
+    margin: 0;
+}
+
+.download-pdf-container .download-pdf div[data-align='justify'] > p:nth-of-type(3) {
+    float: right;
+}
+
+.download-pdf-container .download-pdf #download-pdf a {
+    color: black;
+    font-size: 0.8rem;
+    font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+h3#download-pdf-1 {
+    border-radius: 0%;
+    background-color: black;
+    padding: 2%;    
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 40%;
+}
+
+h3#download-pdf-1::before {
+    content: '';
+    display: inline-block;
+    width: 18px; 
+    height: 18px;
+    background-image: url('../../icons/download.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+h3#download-pdf-1 a {
+    color: white;
+    font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+@media(width >= 900px) {
+    h3#download-pdf-1 {
+        width: 45%;
+    }
+}

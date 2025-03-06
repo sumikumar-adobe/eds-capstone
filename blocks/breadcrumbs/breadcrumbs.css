@@ -1,0 +1,38 @@
+main > .section:first-of-type {
+    margin-bottom: 0;
+}
+
+main > .breadcrumbs-container {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.breadcrumbs .breadcrumbs-list {
+    display: flex;
+    gap: 10px;
+    font-size: 0.7rem;
+    padding-left: 20px;
+}
+
+.breadcrumbs .breadcrumbs-list .breadcrumbs-items {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.breadcrumbs .breadcrumbs-list .breadcrumbs-items:not(:last-child) {
+    font-weight: bold;
+}
+
+.breadcrumbs .breadcrumbs-list .breadcrumbs-items a {
+    color: black;
+}
+
+.breadcrumbs .breadcrumbs-list .breadcrumb-icon {
+    color: var(--capstone-background-color);
+}
+
+@media (width >= 900px) {
+    .breadcrumbs .breadcrumbs-list {
+        padding-left: 0px;
+    }
+}

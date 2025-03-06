@@ -1,0 +1,87 @@
+main .about-us-container {
+    margin: 3%;
+    font-family:  "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.about-us-container .default-content-wrapper h3 {
+    font-size: 2rem;
+}
+
+.about-us-container .default-content-wrapper h3::after {
+    content: '';
+    border: 2px solid var(--capstone-background-color);
+    top: 0.25em;
+    width: 5pc;
+    display: block;
+    position: relative;
+}
+
+.about-us-container .default-content-wrapper p {
+    margin-top: 5%;
+    font-size: 0.7rem;
+    line-height: 2;
+    font-style: italic;
+}
+
+.about-us-container .about-us {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-container .about-us div div:first-child {
+    flex: 2;
+    text-align: center;
+}
+
+.about-us-container .about-us div img {
+    border-radius: 50%;
+    height: 164px;
+    width: 164px;
+    object-fit: cover;
+}
+
+.about-us-container .about-us div div:nth-of-type(2) {
+    text-align: center;
+    margin-top: -5%;
+    line-height: 1.2;
+}
+
+.about-us-container .about-us div div:nth-of-type(2) p:last-child {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.about-us-container .about-us div div:last-child {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    width: 125px;
+    margin: 5% 32% 10%;
+}
+
+.about-us-container .about-us div div:last-child img {
+    height: 24px;
+    width: 24px;
+    object-fit: cover;
+}
+
+@media (width >= 900px) {
+    .about-us-container .default-content-wrapper p {
+        margin: 2% 0;
+    }
+
+    .about-us-container .about-us {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-us-container .about-us div div:last-child {
+        margin: 9% 20% 10%;
+    }
+
+    .about-us-container .about-us {
+        flex: 1;
+    }
+
+}
