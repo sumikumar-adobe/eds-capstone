@@ -49,6 +49,11 @@ header nav p {
   line-height: 1;
 }
 
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: none;
+}
+
 header nav a:any-link {
   color: currentcolor;
 }
@@ -229,6 +234,10 @@ header nav .nav-sections ul>li>ul>li {
     padding: 15px;
   }
 
+    header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
+        padding: 8px 0;
+    }
+
   header nav .nav-sections .default-content-wrapper>ul>li:hover {
     background-color: var(--capstone-background-color);
   }
@@ -261,9 +270,7 @@ header nav .nav-sections ul>li>ul>li {
     border-bottom: 8px solid var(--light-color);
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
-    padding: 8px 0;
-  }
+
 }
 
 @media (width >=1200px) {
@@ -275,11 +282,6 @@ header nav .nav-sections ul>li>ul>li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: none;
 }
 
 /* Registration */
@@ -364,8 +366,8 @@ header .register-nav div:last-of-type>ul>.nav-drop[aria-expanded='true']>ul {
 
 header .register-nav div:last-of-type>ul>.nav-drop[aria-expanded='true']>ul li {
   font-size: 14px;
+    border-bottom: 0.25px solid;
   border-bottom-color: dimgray !important;
-  border-bottom: 0.25px solid;
   padding: 1px 0 1px 15px;
 }
 
@@ -395,7 +397,6 @@ header .form-container .form-wrapper .form {
 }
 
 @media(width >= 900px) {
-
   header .nav-wrapper #register-nav-header .register-nav {
     padding: 0.5% 2%;
     font-size: 1.2rem;
@@ -423,7 +424,7 @@ header .form-container .form-wrapper .form {
     width: 375px;
   }
 
-  header .register-nav div:last-of-type>ul>.nav-drop[aria-expanded='true']>ul li { 
+  header .register-nav div:last-of-type>ul>.nav-drop[aria-expanded='true']>ul li {
     font-size: 18px;
     padding: 5px 0 5px 20px;
   }

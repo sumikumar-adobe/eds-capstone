@@ -74,14 +74,10 @@ main .about-us-container {
     .about-us-container .about-us {
         flex-direction: row;
         justify-content: space-between;
+        flex: 1;
     }
 
     .about-us-container .about-us div div:last-child {
         margin: 9% 20% 10%;
     }
-
-    .about-us-container .about-us {
-        flex: 1;
-    }
-
 }

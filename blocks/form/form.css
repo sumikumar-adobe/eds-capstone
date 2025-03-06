@@ -92,7 +92,6 @@
 }
 
 @media (width >=600px) {
-
   .form input,
   .form select,
   .form textarea {
@@ -105,7 +104,6 @@
 }
 
 @media (width >=900px) {
-
   .form label,
   .form fieldset>legend {
     font-size: 1.2rem;

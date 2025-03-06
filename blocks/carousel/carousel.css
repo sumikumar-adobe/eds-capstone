@@ -30,7 +30,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    min-height: min(50vw, calc(100dvh - var(--header-height)));
+    min-height: min(50vw, calc(100dvh - var(--nav-height)));
 }
 
 .carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
@@ -71,7 +71,7 @@
 
 .carousel .carousel-slide .carousel-slide-content a.button {
     background-color: var(--capstone-background-color);
-    border-radius: 0%;
+    border-radius: 0;
     color: black;
     font-size: 0.9rem;
     padding: 4% 7%;
@@ -102,12 +102,17 @@
     background-color: var(--text-color);
 }
 
+.carousel-navigation-buttons {
+    float: right;
+    margin-top: 0;
+}
+
 .carousel .carousel-navigation-buttons {
     position: absolute;
     top: 103%;
     transform: translateY(-50%);
     left: 12px;
-    right: 0px;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -154,11 +159,6 @@
     left: calc(50% - 2px);
 }
 
-.carousel-navigation-buttons {
-    float: right;
-    margin-top: 0;
-}
-
 .carousel-container .default-content-wrapper h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 300;
@@ -166,12 +166,12 @@
 }
 
 .carousel-container .default-content-wrapper h3::after {
-  border-bottom: 2px solid var(--capstone-background-color);
-  content: '';
-  display: block;
-  position: relative;
-  top: .25em;
-  width: 5pc;
+    border-bottom: 2px solid var(--capstone-background-color);
+    content: '';
+    display: block;
+    position: relative;
+    top: .25em;
+    width: 5pc;
 }
 
 @media (width >=600px) {
@@ -191,6 +191,7 @@
 
     .carousel .carousel-slide .carousel-slide-content {
         --slide-content-width: 94%;
+
         padding-bottom: 0;
         left: 2%;
         top: -40%;

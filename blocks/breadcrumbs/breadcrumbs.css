@@ -33,6 +33,6 @@ main > .breadcrumbs-container {
 
 @media (width >= 900px) {
     .breadcrumbs .breadcrumbs-list {
-        padding-left: 0px;
+        padding-left: 0;
     }
 }

@@ -255,6 +255,7 @@ main>.section {
 main>.section>div {
   max-width: 1200px;
   margin: auto;
+
   /* padding: 0 24px; */
 }
 
@@ -297,18 +298,11 @@ main .section.magazine:not(:has(~ .section.magazine)) p:last-of-type {
 
 main .section.word-dictionary {
   background-color: lightgray;
-  margin: 0px;
+  margin: 0;
 }
 
 main .section.word-dictionary .default-content-wrapper {
   padding: 10%;
-}
-
-main .section.word-dictionary h4,
-.section.word-dictionary p:first-of-type {
-  font-size: 2rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: bold;
 }
 
 main .section.word-dictionary .default-content-wrapper p:first-of-type::after {
@@ -339,24 +333,20 @@ main .section.word-dictionary .default-content-wrapper p:first-of-type::after {
   }
 
   main > .section.magazine:first-of-type {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: 1 / 4;
   }
 
   main .section.breadcrumbs-container {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: 1 / 4;
   }
 
   main .section.word-dictionary {
     margin: 2% 5%;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
   }
 
   main .section.magazine:not(:first-of-type) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
     text-align: justify;
   }
 
@@ -364,21 +354,26 @@ main .section.word-dictionary .default-content-wrapper p:first-of-type::after {
     padding: 3.7%;
   }
 
+    main .section.word-dictionary h4,
+    .section.word-dictionary p:first-of-type {
+        font-size: 2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
   main .section.magazine:not(:has(~ .section.magazine)) p:last-of-type {
     padding-bottom: 10%;
   }
 
   main .section.magazine-author-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
   }
 
   main .articles-list-container {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column: 3 / 4;
     grid-row-start: 3;
   }
-  
+
 }
 
 /* section metadata */
