@@ -120,17 +120,17 @@ export default async function decorate(block) {
 
   const registerNav = document.createElement('div');
   registerNav.id = 'register-nav-header';
-  
+
   while (fragment.firstElementChild) {
-    if(fragment.firstElementChild.children.length > 0) {
-      if(fragment.firstElementChild.classList.contains('register-nav-container') || fragment.firstElementChild.classList.contains('form-container')) {
+    if (fragment.firstElementChild.children.length > 0) {
+      if (fragment.firstElementChild.classList.contains('register-nav-container') || fragment.firstElementChild.classList.contains('form-container')) {
         registerNav.append(fragment.firstElementChild);
       } else {
         nav.append(fragment.firstElementChild);
       }
     } else {
       fragment.removeChild(fragment.firstElementChild);
-    } 
+    }
   }
 
   const classes = ['brand', 'sections', 'tools'];
