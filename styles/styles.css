@@ -35,6 +35,7 @@
   --heading-font-size-m: 27px;
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
+    --highlight-background-color: #ccc;
 
   /* nav height */
   --nav-height: 64px;

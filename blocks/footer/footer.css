@@ -1,73 +1,69 @@
+/* stylelint-disable */
+
 footer {
-  background-color: black;
-  font-size: var(--body-font-size-xs);
-  color: white;
+    background-color: #202020;
+    color: #ebebeb;
+    padding: 1rem 0 1.5rem;
+    margin-top: 3rem;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer > div {
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+          "brand nav follow"
+          "disc disc disc";
+}
+
+.footer .brand {
+    grid-area: brand;
+}
+
+.footer .nav {
+    grid-area: nav;
+}
+
+.footer .follow {
+    grid-area: follow;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 17px;
+    text-decoration: none;
+}
+
+.footer .disc {
+    grid-area: disc;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+footer li {
+    display: block;
+    float: left;
+    color: #202020;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 17px;
+    text-decoration: none;
+}
+
+.footer a {
+    color: white;
 }
 
 footer .footer p {
-  margin: 0;
-}
-
-footer .footer .section:first-of-type .default-content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 5%;
-}
-
-footer .footer .default-content-wrapper picture img {
-  width: 88px;
-  height: 32px;
-}
-
-footer .footer .default-content-wrapper ul {
-  list-style: none;
-  line-height: 2;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 2rem;
-}
-
-footer .footer .default-content-wrapper a {
-  color: white;
-}
-
-footer .footer .section:last-of-type .default-content-wrapper p {
-  font-size: 0.8rem;
-  margin-bottom: 5%;
-}
-
-footer .footer .section:last-of-type .default-content-wrapper a {
-  text-decoration: underline;
-}
-
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
-
-  footer .footer .section:first-of-type .default-content-wrapper {
-    display: flex;
-    margin-bottom: 1%;
-  }
-
-  footer .footer .section:first-of-type .default-content-wrapper p {
-    flex: 1;
-  }
-
-  footer .footer .section:first-of-type .default-content-wrapper ul {
-    flex: 2;
-    display: flex;
-    gap: 20px;
-  }
-
-  footer .footer .section:last-of-type .default-content-wrapper p {
-    font-size: 0.8rem;
-    margin-bottom: 2%;
-  }
+    margin: 0;
+    font-size: var(--body-font-size-xs);
+    line-height: 1.25;
 }
